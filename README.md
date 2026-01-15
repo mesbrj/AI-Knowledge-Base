@@ -53,7 +53,7 @@ System combining document Q&A (RAG) and content summarization capabilities.
 - Multiple formats (bullet points, paragraphs, executive summary)
 - Configurable length (short/medium/long)
 - Batch processing with concurrent workers
-- Job queue with Redis/in-memory queue
+- Job queue with Go channels
 
 *API & Interface:*
 - REST API (ingestion, query, summarization endpoints)
