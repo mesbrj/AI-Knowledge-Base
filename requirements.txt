@@ -1,0 +1,55 @@
+# Core Framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+
+# LangChain & LLM
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-core>=0.3.0
+langchain-ollama>=0.2.0
+
+# Vector Store
+qdrant-client>=1.11.0
+langchain-qdrant>=0.2.0
+
+# Document Processing
+pypdf>=4.4.0
+python-docx>=1.1.0
+python-magic>=0.4.27
+beautifulsoup4>=4.12.0
+lxml>=5.3.0
+html2text>=2024.2.26
+markdown>=3.7
+
+# Text Processing
+tiktoken>=0.8.0
+unstructured>=0.18.0
+
+# Storage
+boto3>=1.35.0
+aiofiles>=24.1.0
+
+# Task Queue (Optional)
+redis>=5.2.0
+celery>=5.4.0
+
+# Monitoring & Logging
+prometheus-client>=0.21.0
+python-json-logger>=2.0.7
+
+# Utilities
+httpx>=0.28.0
+python-multipart>=0.0.12
+websockets>=14.0
+typer>=0.15.0
+rich>=13.9.0
+
+# Development
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
+pytest-cov>=6.0.0
+black>=24.10.0
+ruff>=0.8.0
+mypy>=1.13.0

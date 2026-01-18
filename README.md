@@ -61,11 +61,13 @@ System combining document Q&A (RAG) and content summarization capabilities.
 - WebSocket for streaming responses
 - Health checks and metrics
 
-MVP Technical Stack: Monolith (1 Service):
-- **Language:** Go 1.24+
-- **LLM:** Ollama (`deepseek-r1:14b` for generation, `nomic-embed-text` for embeddings)
-- **Vector DB:** Qdrant 
-- **Queue:** Go channels
+MVP Technical Stack:
+- **Language:** Python 3.11+
+- **LLM Framework:** LangChain with Ollama (`deepseek-r1:14b` for generation, `nomic-embed-text` for embeddings)
+- **Vector DB:** Qdrant (via langchain-qdrant)
+- **Queue:** Python asyncio + Redis (optional for production)
 - **Storage:** S3/local filesystem for raw documents
-- **API Framework:** Fuego (Auto-generated OpenAPI 3.0, type-safe Go generics)
-- **Testing:** Go testing + testify
+- **API Framework:** FastAPI (Auto-generated OpenAPI 3.0, async support)
+- **Testing:** pytest + pytest-asyncio
+
+[*Quick Start*](/docs/QUICK_START.md)
