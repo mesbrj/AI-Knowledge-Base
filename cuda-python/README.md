@@ -14,11 +14,16 @@
 
 
 ## Installation Steps
-
-- Install CUDA Toolkit 1x.x
-- CUDA Python and Numba-CUDA
-```bash
-pip install cuda-python numba-cuda[cu1x]
-```
+- Install miniconda
+- CUDA Python
 - Install CuPy
 - Install RAPIDS
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh
+conda install numba
+conda install cudatoolkit
+conda install -c conda-forge cupy
+conda create -n rapids-25.12 -c rapidsai -c conda-forge rapids=25.12 python=3.13 'cuda-version=13.0'
+```
+
