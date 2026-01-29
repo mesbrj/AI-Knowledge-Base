@@ -1,73 +1,39 @@
-# LLM-Knowledge-Base
+# AI-Knowledge-Base
 
-# Locally LLMs with Ollama
+## LLMs
 
-Windows 11 host with Nvidia RTX 4070TI GPU (12GB VRAM) through WSL2
+### Core techniques
 
-**NVIDIA Driver installed only on Windows host**
+- [Locally LLMs with Ollama on WSL2 with NVIDIA GPU support](/docs/LOCAL-LLM.md)
 
-**General GPU Access in WSL2**
-- [CUDA on WSL User Guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#getting-started-with-cuda-on-wsl-2) 
-- [CUDA Toolkit (WSL-Ubuntu)](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local)
+- [RAG + Summarization (Documentation System): Ollama, LangChain, Qdrant](/rag-pipeline/README.md)
 
-**GPU Access in WSL2 containers**
-- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+- **Prompt Engineering with Chain-of-Thought** - Systematic techniques for better outputs
 
-**Ollama and LLMs**
-- [Install Ollama and pull models](https://docs.ollama.com/)
-    - [deepseek-r1:14b Q4_K_M (size ~9.0GB)](https://ollama.com/library/deepseek-r1:14b)
-    - [gemma3:12b Q4_K_M (size ~8.1GB)](https://ollama.com/library/gemma3:12b)
-    - [llama3.1:8b Q8_0 (size ~8.5GB)](https://ollama.com/library/llama3.1:8b-instruct-q8_0)
-    - [nomic-embed-text:v1.5 F16 (size ~274MB)](https://ollama.com/library/nomic-embed-text:v1.5)
+### Agent Systems
 
+- **AI Agent (LangGraph) and MCP Server** - Intelligent agent with MCP server, function calling and tool use, memory management
 
-# Implementation System Example
+- **Orchestration** - Multi-agent systems, complex workflows, state management, Human-in-the-loop
 
-## *Documentation System (RAG + Summarization)*
+### Model Customization
 
-System combining document Q&A (RAG) and content summarization capabilities.
+- **LLM PEFT (Parameter-Efficient Fine-Tuning)** - LLM [fine-tuning and reinforcement learning](https://unsloth.ai/docs/get-started/fine-tuning-llms-guide) with [Unsloth](https://unsloth.ai/docs)
 
-**Architecture:**
-- Document Ingestion Service (parsing, chunking, embedding)
-- Vector Storage (Qdrant)
-- Query Service (semantic search + answer generation)
-- Summarization Service (content extraction + summarization)
-- API Gateway (REST API + CLI)
+- **Custom Quantization with [llama.cpp](https://github.com/ggml-org/llama.cpp)** - Convert and quantize a model
 
-**Core Features:**
+### Model Evaluation
 
-*Document Processing:*
-- Multi-format support (PDF, TXT, Markdown, DOCX)
-- URL content extraction and cleaning
-- Intelligent text chunking (1000 tokens, 200 overlap)
-- Metadata extraction and indexing
+- **Model Evaluation & Benchmarking** - lm-eval and RAGAS
 
-*RAG Pipeline:*
-- Embedding generation using `nomic-embed-text` (768 dimensions)
-- Qdrant vector storage with HNSW indexing
-- Hybrid search (semantic + keyword)
-- Context-aware answer generation with citations
-- Multi-query retrieval for better coverage
+## GPU Computing
 
-*Summarization:*
-- Multiple formats (bullet points, paragraphs, executive summary)
-- Configurable length (short/medium/long)
-- Batch processing with concurrent workers
-- Job queue with Go channels
+- [NVIDIA CUDA Python, CuPy and cuDF (GPU-accelerated NumPy/SciPy and Pandas)]
 
-*API & Interface:*
-- REST API (ingestion, query, summarization endpoints)
-- CLI tool for local operations
-- WebSocket for streaming responses
-- Health checks and metrics
+- [NVIDIA cuBLAS - GPU-accelerated APIs: Basic Linear Algebra Subprograms and General Matrix Multiplication]
 
-MVP Technical Stack:
-- **Language:** Python 3.11+
-- **LLM Framework:** LangChain with Ollama (`deepseek-r1:14b` for generation, `nomic-embed-text` for embeddings)
-- **Vector DB:** Qdrant (via langchain-qdrant)
-- **Queue:** Python asyncio + Redis (optional for production)
-- **Storage:** S3/local filesystem for raw documents
-- **API Framework:** FastAPI (Auto-generated OpenAPI 3.0, async support)
-- **Testing:** pytest + pytest-asyncio
+## Machine Learning
 
-[*Quick Start*](/docs/QUICK_START.md)
+## Neural Network - Deep Learning
+
+- [NVIDIA cuDNN (CUDA Deep Neural Network): PyTorch and TensorFlow with GPU support]
