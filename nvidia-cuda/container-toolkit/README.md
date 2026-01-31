@@ -1,11 +1,10 @@
 # GPU Access in WSL2 containers
 Pre-requisites:
 - ***NVIDIA Driver installed only on Windows host***
-- ***NVIDIA CUDA Toolkit installed in WSL2 Ubuntu 24.04.3 LTS***
 
 ## WSL2 - Ubuntu 24.04.3 LTS
 
-[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+[NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)
 
 - [With apt: Ubuntu, Debian](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#with-apt-ubuntu-debian)
 

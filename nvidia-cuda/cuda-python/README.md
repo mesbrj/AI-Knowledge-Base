@@ -1,5 +1,4 @@
 [CUDA Python](https://developer.nvidia.com/cuda/python)
-- [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local)
 - [cuda-python](https://pypi.org/project/cuda-python/)
 - [Numba-CUDA](https://nvidia.github.io/numba-cuda/)
 - [docs](https://nvidia.github.io/cuda-python/latest/index.html)
@@ -14,6 +13,12 @@
 
 
 ## Installation Steps
+
+**Pre-requisites**:
+- *NVIDIA Driver installed on Windows host machine*
+- *NVIDIA CUDA Toolkit installed in WSL2 Ubuntu 24.04.3 LTS*
+
+**Steps**:
 - Install miniconda
 - CUDA Python
 - Install CuPy
@@ -22,8 +27,7 @@
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
 bash ~/miniconda.sh
 conda install numba
-conda install cudatoolkit
 conda install -c conda-forge cupy
-conda create -n rapids-25.12 -c rapidsai -c conda-forge rapids=25.12 python=3.13 'cuda-version=13.0'
+conda create -n rapids-25.12 -c rapidsai -c conda-forge rapids=25.12 python=3.13 'cuda-version=13.1'
 ```
 
