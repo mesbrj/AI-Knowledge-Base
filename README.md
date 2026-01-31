@@ -4,9 +4,9 @@
 
 ### Core techniques
 
-- [Locally LLMs with Ollama on WSL2 with NVIDIA GPU support](/docs/LOCAL-LLM.md)
+- [Locally LLMs with Ollama](/docs/LOCAL-LLM.md)
 
-- [Locally LLMs with llama.cpp on WSL2 with NVIDIA GPU support]
+- **Locally LLMs with llama.cpp**
 
 - [RAG + Summarization (Documentation System): Ollama, LangChain, Qdrant](/rag-pipeline/README.md)
 
@@ -32,10 +32,10 @@
 
 - [NVIDIA CUDA Python, CuPy and cuDF (GPU-accelerated NumPy/SciPy and Pandas)](/nvidia-cuda/cuda-python/README.md)
 
-- [NVIDIA cuBLAS - GPU-accelerated APIs: Basic Linear Algebra Subprograms and General Matrix Multiplication]
+- **NVIDIA cuBLAS - GPU-accelerated APIs: Basic Linear Algebra Subprograms and General Matrix Multiplication**
 
 ## Machine Learning
 
 ## Neural Network - Deep Learning
 
-- [NVIDIA cuDNN (CUDA Deep Neural Network): PyTorch and TensorFlow with GPU support]
+- **NVIDIA cuDNN (CUDA Deep Neural Network): PyTorch and TensorFlow with GPU support**
