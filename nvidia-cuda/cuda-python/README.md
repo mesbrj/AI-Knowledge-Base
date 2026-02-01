@@ -25,12 +25,11 @@
 
 ## Installation Steps
 
-**Pre-requisites**:
+### **Pre-requisites for local development**:
 - *NVIDIA Driver installed on Windows host machine*
-- *NVIDIA CUDA Toolkit installed in WSL2 Ubuntu 24.04.3 LTS*
+- ***NVIDIA CUDA Toolkit (SDK)*** installed in WSL2 Ubuntu 24.04.3 LTS*
 
 `numba-cuda`, `cuda-python`, `CuPy`, `RAPIDS` and `PyTorch` will be installed via pip to always use the CUDA toolkit SDK installed globally to build and run your libraries.
-
 ```bash
 # Environment variables for CUDA Toolkit SDK
 export CUDA_HOME=/usr/local/cuda
@@ -38,5 +37,9 @@ export PATH=$CUDA_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
 ```
 
+### **Pre-requisites for containerized development**:
+- *NVIDIA Driver installed on Windows host machine*
+- ***NVIDIA Container Toolkit*** installed on WSL2 Ubuntu 24.04.3 LTS*
 
+Use the [official NVIDIA CUDA base image](https://hub.docker.com/r/nvidia/cuda) with the required CUDA Toolkit version to build and run the desired libraries. Three options are available: `base`, `runtime` and `devel` (SDK) useful for multi-stage builds.
 
