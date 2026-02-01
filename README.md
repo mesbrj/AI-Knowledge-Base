@@ -34,10 +34,9 @@
 
 ### NVIDIA CUDA
 
-- [CUDA Toolkit](/nvidia-cuda/cuda-toolkit/README.md)
+- [CUDA Toolkit SDK](/nvidia-cuda/cuda-toolkit/README.md)
 - [Container Toolkit](/nvidia-cuda/container-toolkit/README.md)
-
-- [NVIDIA CUDA Python, CuPy and cuDF (GPU-accelerated NumPy/SciPy and Pandas)](/nvidia-cuda/cuda-python/README.md)
+- [CUDA Python](/nvidia-cuda/cuda-python/README.md)
 
 - **NVIDIA cuBLAS - GPU-accelerated APIs: Basic Linear Algebra Subprograms and General Matrix Multiplication**
 

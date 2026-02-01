@@ -5,7 +5,7 @@
 
 # CUDA Python Ecosystem Overview
 
-- [Nvidia CUDA Toolkit 13.1](https://developer.nvidia.com/cuda/toolkit) - Full SDK and Runtime: compiled libraries, JIT libnvvm (LLVM compiler), NVRTC (C++ string runtime compilation ), CUDA NVCC (C/C++ Compiler), headers, profiling and debugging tools
+- [Nvidia CUDA Toolkit 13.1](https://developer.nvidia.com/cuda/toolkit) - Full SDK and Runtime: compiled libraries, JIT libnvvm (LLVM compiler), NVRTC (C++ string runtime compilation), CUDA NVCC (C/C++ Compiler), headers, profiling and debugging tools
 
 - Python [cuda-toolkit](https://pypi.org/project/cuda-toolkit/) (PyPI) meta-package - Runtime (only): libnvvm, NVRTC and compiled libraries
 
