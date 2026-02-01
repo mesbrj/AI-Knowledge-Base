@@ -1,9 +1,9 @@
-# Ollama
-
-**Pre-requisite on WSL2**
-- [Hardware support](https://docs.ollama.com/gpu)
+# Pre-requisite on WSL2
 - ***NVIDIA Driver installed only on Windows host***
+- [***NVIDIA Container Toolkit***](/nvidia-cuda/container-toolkit/README.md) installed on WSL2 for conteinerized deployment
 
+# Ollama
+[**Hardware support**](https://docs.ollama.com/gpu)
 
 [Install Ollama and pull models:](https://docs.ollama.com/)
 - [deepseek-r1:14b Q4_K_M (size ~9.0GB)](https://ollama.com/library/deepseek-r1:14b)

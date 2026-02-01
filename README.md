@@ -4,9 +4,9 @@
 
 ### Local LLMs
 
-- [**Ollama**](/docs/LOCAL-LLM.md)
-- [**llama.cpp**](/docs/LOCAL-LLM.md)
-- [**NVIDIA NIM (NVIDIA Inference Microservices)**](/docs/LOCAL-LLM.md)
+- [**Ollama**](/local-llm/README.md)
+- [**llama.cpp**](/local-llm/README.md)
+- [**NVIDIA NIM (NVIDIA Inference Microservices)**](/local-llm/README.md)
 
 ### Core techniques
 
