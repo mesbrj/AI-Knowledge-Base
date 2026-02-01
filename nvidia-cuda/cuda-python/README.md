@@ -1,16 +1,27 @@
-[CUDA Python](https://developer.nvidia.com/cuda/python)
-- [cuda-python](https://pypi.org/project/cuda-python/)
-- [Numba-CUDA](https://nvidia.github.io/numba-cuda/)
-- [docs](https://nvidia.github.io/cuda-python/latest/index.html)
-- [NVIDIA CUDA wrappers](https://developer.nvidia.com/blog/unifying-the-cuda-python-ecosystem/)
+# [CUDA Python](https://developer.nvidia.com/cuda/python)
 
-[CuPy](https://cupy.dev/)
-- [Installation](https://docs.cupy.dev/en/stable/install.html)
+- [CUDA Python Documentation](https://nvidia.github.io/cuda-python/latest/index.html)
+- [NVIDIA CUDA wrappers (NVIDIA Blog)](https://developer.nvidia.com/blog/unifying-the-cuda-python-ecosystem/)
 
-[RAPIDS - cuDF](https://rapids.ai/ecosystem/#featured-software)
-- [Quick Start](https://rapids.ai/#quick-start)
-- [Installation Guide](https://docs.rapids.ai/install/)
+# CUDA Python Ecosystem Overview
 
+- [Nvidia CUDA Toolkit 13.1](https://developer.nvidia.com/cuda/toolkit) - Full SDK and Runtime: compiled libraries, JIT libnvvm (LLVM compiler), NVRTC (C++ string runtime compilation ), CUDA NVCC (C/C++ Compiler), headers, profiling and debugging tools
+
+- Python [cuda-toolkit](https://pypi.org/project/cuda-toolkit/) (PyPI) meta-package - Runtime (only): libnvvm, NVRTC and compiled libraries
+
+- Python [cuda-python](https://pypi.org/project/cuda-python/) (PyPI) meta-package - Python bindings for CUDA Driver and Runtime APIs.
+
+- [Numba](https://numba.readthedocs.io/en/stable/index.html) (CPU intesive tasks and paralelism) / [Numba-CUDA](https://nvidia.github.io/numba-cuda/) (GPU computing) - Just-in-time compiler for Python that translates a subset of Python and NumPy code into fast machine code (CPU and GPU) using LLVM. The minimal requirement for Numba-CUDA is the [CUDA runtime](https://numba.readthedocs.io/en/stable/cuda/overview.html#software).
+
+
+# Python Libraries for GPU Computing
+
+- [PyTorch](https://pytorch.org/get-started/locally/)
+- [CuPy (NumPy and SciPy)](https://cupy.dev/)
+- [RAPIDS - cuDF (mirrored pandas API)](https://rapids.ai/ecosystem/#featured-software)
+- [Numba-CUDA](https://numba.readthedocs.io/en/stable/cuda/index.html) python [bindings](https://numba.readthedocs.io/en/stable/cuda/overview.html#cuda-bindings)
+    - Own ctypes-based bindings for default.
+    - [cuda-python](https://pypi.org/project/cuda-python/) will be used by default in a future Numba release.
 
 ## Installation Steps
 
@@ -18,16 +29,14 @@
 - *NVIDIA Driver installed on Windows host machine*
 - *NVIDIA CUDA Toolkit installed in WSL2 Ubuntu 24.04.3 LTS*
 
-**Steps**:
-- Install miniconda
-- CUDA Python
-- Install CuPy
-- Install RAPIDS
+`numba-cuda`, `cuda-python`, `CuPy`, `RAPIDS` and `PyTorch` will be installed via pip to always use the CUDA toolkit SDK installed globally to build and run your libraries.
+
 ```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
-bash ~/miniconda.sh
-conda install numba
-conda install -c conda-forge cupy
-conda create -n rapids-25.12 -c rapidsai -c conda-forge rapids=25.12 python=3.13 'cuda-version=13.1'
+# Environment variables for CUDA Toolkit SDK
+export CUDA_HOME=/usr/local/cuda
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
 ```
+
+
 
