@@ -1,6 +1,6 @@
 # Pre-requisite on WSL2
 - ***NVIDIA Driver installed only on Windows host***
-- [***NVIDIA Container Toolkit***](/nvidia-cuda/container-toolkit/README.md) installed on WSL2 for conteinerized deployment
+- [***NVIDIA Container Toolkit***](https://github.com/mesbrj/GPU-Computing-Knowledge-Base/blob/main/nvidia-cuda/container-toolkit/README.md) installed on WSL2 for conteinerized deployment
 
 # Ollama
 [**Hardware support**](https://docs.ollama.com/gpu)
