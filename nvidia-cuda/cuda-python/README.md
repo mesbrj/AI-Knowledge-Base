@@ -39,7 +39,7 @@ export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
 
 ### **Pre-requisites for containerized development**:
 - *NVIDIA Driver installed on Windows host machine*
-- ***NVIDIA Container Toolkit*** installed on WSL2 Ubuntu 24.04.3 LTS*
+- ***NVIDIA Container Toolkit*** installed on WSL2 Ubuntu 24.04.3 LTS
 
 Use the [official NVIDIA CUDA base image](https://hub.docker.com/r/nvidia/cuda) with the required CUDA Toolkit version to build and run the desired libraries. Three options are available: `base`, `runtime` and `devel` (SDK) useful for multi-stage builds.
 
