@@ -8,17 +8,17 @@
 - [**llama.cpp**](/local-llm/README.md)
 - [**NVIDIA NIM (NVIDIA Inference Microservices)**](/local-llm/README.md)
 
-### Core techniques
+### Core techniques (prompt engineering)
+
+- **Chain-of-Thought and Tool Use** - Systematic step-by-step techniques for better outputs with function calling
 
 - [RAG + Summarization (Documentation System): Ollama, LangChain, Qdrant](/rag-pipeline/README.md)
 
-- **Prompt Engineering with Chain-of-Thought** - Systematic techniques for better outputs
-
 ### Agent Systems
 
-- **AI Agent (LangGraph) and MCP Server** - Intelligent agent with MCP server, function calling and tool use, memory management
+- **AI Agent (LangGraph) and MCP Server** - Intelligent agent with MCP server and memory management
 
-- **Orchestration** - Multi-agent systems, complex workflows, state management, Human-in-the-loop
+- **Orchestration** - Multi-agent systems, complex workflows, state management and Human-in-the-loop
 
 ### Model Customization
 
